@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'inscription</title>
+    <link rel="stylesheet" href="PageAuthentification.css">
+</head>
+<body class="dark">
+    <!--                  <p ><button onclick="toggle()" class="lampe">💡</button></p>        -->
+    <div class="presentation">
+        <div class="carte">
+    <h1>Build your future with <br>precision.</h1>
+    <p>Ascendia transforms your ambition into a structured roadmap.<br>Every step is calculated every move brings you closer to <br>mastery.</p>
+    <ul>
+    <li class="item">Clear step by step roadmap</li>
+    <li class="item">Ai-powered direction</li>
+    <li class="item">Measurable progress</li>
+    </ul>
+    </div>
+    </div>
+
+
+    <div class="inscription">
+     <div class="carte">   
+    <form>
+    <h2>Create your account</h2>
+    <p>Start your journey Now !</p>
+    <input placeholder="first name" type="text" id="firstname"><br>
+    <input placeholder="Last name" type="text" id="lastname"><br>
+    <select id="pays" >
+        <option>Algerie</option>
+        <option>France</option>
+        <option>Italie</option>
+        <option>Allemagne</option>
+        <option>Espagne</option>
+        <option>Maroc</option>
+        <option>Etats-Unis</option>
+        <option>Canada</option>
+    </select><br>
+    <input placeholder="E-mail" type="email" required id="email"><br>
+    <div class="password">
+    <input placeholder="password" type="password" id="motdepasse" required> <label id="togglepassword" onclick="togglemotdepasse()" >👀</label><br>
+    </div>
+    <p id="erreur" style="display: none;" >❌le mots de passe doit avoir un minimum de 8 characteres</p> 
+    <button class="button" type="button" onclick="inscrire()">Create account</button><bR>
+    <p>Already have an account? <a href="#">Log in</a></p>
+    </form>
+    </div>
+    </div>
+
+
+    <script src="PageAuthentification.js"></script>
+
+</body>
+</html>
