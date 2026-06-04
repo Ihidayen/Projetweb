@@ -52,7 +52,7 @@ window.inscrire = function() {
     localStorage.setItem("motdepasse", password);
     localStorage.setItem("methode", "manuel");
 
-    window.location.href = "accueil.html";
+    window.location.href = "index.html";
 }
 
 window.inscrireGoogle = function() {
@@ -67,7 +67,7 @@ window.inscrireGoogle = function() {
             localStorage.setItem("lastname", nom);
             localStorage.setItem("email", user.email);
             localStorage.setItem("methode", "google");
-            window.location.href = "accueil.html";
+            window.location.href = "index.html";
         })
         .catch((error) => {
             alert("Erreur Google : " + error.message);
