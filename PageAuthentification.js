@@ -1,4 +1,19 @@
-function togglemotdepasse() {
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBDJ0YCGOgDkaXa9IkbVb5Z8CRq5KYN0bk",
+    authDomain: "ascendia-e0dcb.firebaseapp.com",
+    projectId: "ascendia-e0dcb",
+    storageBucket: "ascendia-e0dcb.firebasestorage.app",
+    messagingSenderId: "780247264588",
+    appId: "1:780247264588:web:79fac9b47e86a645ff73e9"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.togglemotdepasse = function() {
     let password = document.getElementById("motdepasse");
     let togglepassword = document.getElementById("togglepassword");
     if (password.type === "password") {
@@ -10,7 +25,7 @@ function togglemotdepasse() {
     }
 }
 
-function inscrire() {
+window.inscrire = function() {
     const firstname = document.getElementById("firstname").value;
     const lastname = document.getElementById("lastname").value;
     const pays = document.getElementById("pays").value;
@@ -35,6 +50,26 @@ function inscrire() {
     localStorage.setItem("pays", pays);
     localStorage.setItem("email", e_mail);
     localStorage.setItem("motdepasse", password);
+    localStorage.setItem("methode", "manuel");
 
     window.location.href = "accueil.html";
+}
+
+window.inscrireGoogle = function() {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            const user = result.user;
+            const nomComplet = user.displayName || "";
+            const prenom = nomComplet.split(" ")[0];
+            const nom = nomComplet.split(" ").slice(1).join(" ");
+            localStorage.setItem("firstname", prenom);
+            localStorage.setItem("lastname", nom);
+            localStorage.setItem("email", user.email);
+            localStorage.setItem("methode", "google");
+            window.location.href = "accueil.html";
+        })
+        .catch((error) => {
+            alert("Erreur Google : " + error.message);
+        });
 }

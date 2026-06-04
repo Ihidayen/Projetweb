@@ -34,7 +34,8 @@
                 <p>Continue your roadmap.</p>
                 <input placeholder="Email address" type="email" id="email" required><br>
                 <div class="password">
-                    <input placeholder="Password" type="password" id="motdepasse" required> <label id="togglepassword" onclick="togglemotdepasse()">👀</label><br>
+                    <input placeholder="Password" type="password" id="motdepasse" required>
+                    <label id="togglepassword" onclick="togglemotdepasse()">👀</label><br>
                 </div>
                 <div class="options">
                     <label><input type="checkbox" id="remember"> Remember me</label>
@@ -44,13 +45,16 @@
                 <div class="separateur">
                     <hr><span>or</span><hr>
                 </div>
-                
+                <button class="button-google" type="button" onclick="connecterGoogle()">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" width="18">
+                    &nbsp; Continue with Google
+                </button>
                 <p id="erreur" style="display: none;">❌ Email ou mot de passe incorrect</p>
                 <p>New here? <a href="PageAuthentification.html">Create account</a></p>
             </form>
         </div>
     </div>
 
-    <script src="PageConnexion.js"></script>
+    <script type="module" src="PageConnexion.js"></script>
 </body>
 </html>

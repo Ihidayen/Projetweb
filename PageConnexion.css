@@ -29,6 +29,7 @@ input, select {
     box-sizing: border-box;
     appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
 }
 input[type="checkbox"] {
     width: auto;
@@ -48,6 +49,23 @@ input[type="checkbox"] {
     font-weight: 600;
     border: none;
     font-size: 15px;
+}
+.button-google {
+    cursor: pointer;
+    width: 85%;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    color: #000000;
+    font-weight: 500;
+    border: solid #dddddd 1px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .presentation {
     height: 100vh;
@@ -145,7 +163,7 @@ ul {
     display: flex;
     align-items: center;
     width: 85%;
-    margin: 5px auto;
+    margin: 0 auto 10px auto;
     gap: 10px;
     color: #8888A0;
     font-size: 13px;
@@ -160,7 +178,7 @@ ul {
 }
 #togglepassword {
     position: absolute;
-    right: 3vw;
+    right: 2vw;
     top: 1vh;
     cursor: pointer;
 }
