@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ascendia — Forge ton chemin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- ══════════════════════════════
+       NAVIGATION
+  ══════════════════════════════ -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">Ascendia</span>
+        </a>
+        <div class="nav-links">
+          <a href="content/explorer.html">Explorer</a>
+          <a href="content/connexion.html">Connexion</a>
+        </div>
+        <a href="content/inscription.html" class="nav-cta"
+          >Commencer gratuitement</a
+        >
+      </div>
+    </nav>
+
+    <main>
+      <!-- ══════════════════════════════
+         HERO
+    ══════════════════════════════ -->
+      <section class="hero">
+        <div class="hero-bg">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="grid-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-chip">
+            <span class="chip-dot"></span>
+            Propulsé par l'IA · Roadmaps illimitées
+          </div>
+
+          <h1 class="hero-title">
+            Forge ton chemin vers
+            <span class="title-gradient">n'importe quel objectif</span>
+          </h1>
+
+          <p class="hero-sub">
+            Entre un objectif — métier, sport, langue, compétence — et obtiens
+            une roadmap personnalisée avec étapes, sous-étapes, ressources et
+            tests de validation.
+          </p>
+
+          <div class="search-wrap">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Ex: Devenir développeur IA, apprendre le calisthenics..."
+            />
+            <button class="search-btn">
+              Générer ma roadmap <span class="btn-arrow">→</span>
+            </button>
+          </div>
+
+          <div class="suggestions">
+            <span class="sug">💻 Développeur Web</span>
+            <span class="sug">🤸 Calisthenics</span>
+            <span class="sug">🇮🇹 Italien B2</span>
+            <span class="sug">🤖 Machine Learning</span>
+            <span class="sug">📸 Photographie</span>
+            <span class="sug">🎸 Guitare</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         STATS
+    ══════════════════════════════ -->
+      <section class="stats-section">
+        <div class="stat-item">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Objectifs possibles</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">~3s</div>
+          <div class="stat-label">Temps de génération</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Gratuit & sans backend</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">📈</div>
+          <div class="stat-label">Progression visuelle</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         ROADMAPS POPULAIRES
+    ══════════════════════════════ -->
+      <section class="cards-section">
+        <div class="section-header">
+          <h2 class="section-title">Roadmaps populaires</h2>
+          <a href="content/explorer.html" class="section-more">Voir tout →</a>
+        </div>
+
+        <div class="filter-bar">
+          <button class="filter-btn active">Tous</button>
+          <button class="filter-btn">Tech</button>
+          <button class="filter-btn">Sport</button>
+          <button class="filter-btn">Langues</button>
+          <button class="filter-btn">Créativité</button>
+          <button class="filter-btn">Business</button>
+        </div>
+
+        <div class="cards-grid">
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">💻</div>
+              <span class="card-badge badge-medium">Intermédiaire</span>
+            </div>
+            <div class="card-name">Développeur Web Full Stack</div>
+            <div class="card-desc">
+              HTML · CSS · JS · React · Node.js · Déploiement
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">12 étapes</span>
+              <span class="card-time">~6 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🤖</div>
+              <span class="card-badge badge-hard">Avancé</span>
+            </div>
+            <div class="card-name">Machine Learning & IA</div>
+            <div class="card-desc">
+              Python · Maths ML · Scikit-learn · Deep Learning · LLMs
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">8 étapes</span>
+              <span class="card-time">~8 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🤸</div>
+              <span class="card-badge badge-easy">Débutant</span>
+            </div>
+            <div class="card-name">Calisthenics — Zéro à Muscle-up</div>
+            <div class="card-desc">
+              Fondations · Force · Compétences avancées · Nutrition
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">7 étapes</span>
+              <span class="card-time">~4 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🇮🇹</div>
+              <span class="card-badge badge-hard">Avancé</span>
+            </div>
+            <div class="card-name">Italien niveau B2 — CILS</div>
+            <div class="card-desc">
+              Grammaire · Vocabulaire · Oral · Écrit · Examen officiel
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">10 étapes</span>
+              <span class="card-time">~8 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🎸</div>
+              <span class="card-badge badge-medium">Intermédiaire</span>
+            </div>
+            <div class="card-name">Guitare acoustique</div>
+            <div class="card-desc">
+              Accords · Rythme · Mélodies · Théorie musicale
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">8 étapes</span>
+              <span class="card-time">~6 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🚀</div>
+              <span class="card-badge badge-hard">Avancé</span>
+            </div>
+            <div class="card-name">Lancer sa startup</div>
+            <div class="card-desc">
+              Idée · Validation · MVP · Marketing · Financement
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">11 étapes</span>
+              <span class="card-time">~12 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🔐</div>
+              <span class="card-badge badge-hard">Avancé</span>
+            </div>
+            <div class="card-name">Cybersécurité</div>
+            <div class="card-desc">
+              Réseaux · Linux · Pentest · CTF · Certifications
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">10 étapes</span>
+              <span class="card-time">~9 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🎨</div>
+              <span class="card-badge badge-medium">Intermédiaire</span>
+            </div>
+            <div class="card-name">Design UI/UX</div>
+            <div class="card-desc">
+              Figma · Principes design · Prototypes · Portfolio
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">9 étapes</span>
+              <span class="card-time">~5 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+
+          <a href="content/roadmap.html" class="road-card">
+            <div class="card-top">
+              <div class="card-icon">🏃</div>
+              <span class="card-badge badge-easy">Débutant</span>
+            </div>
+            <div class="card-name">Course à pied — 10km</div>
+            <div class="card-desc">
+              Endurance · Technique · Plan d'entraînement · Nutrition
+            </div>
+            <div class="card-footer">
+              <span class="card-meta">6 étapes</span>
+              <span class="card-time">~3 mois</span>
+            </div>
+            <div class="card-bar">
+              <div class="card-bar-fill" style="width: 0%"></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         COMMENT ÇA MARCHE
+    ══════════════════════════════ -->
+      <section class="how-section">
+        <h2
+          class="section-title"
+          style="text-align: center; margin-bottom: 48px"
+        >
+          Comment ça marche
+        </h2>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="how-num">01</div>
+            <div class="how-icon">🎯</div>
+            <h3>Définis ton objectif</h3>
+            <p>
+              Tape n'importe quel objectif — métier, compétence, sport, langue.
+              L'IA comprend tout.
+            </p>
+          </div>
+
+          <div class="how-arrow">→</div>
+
+          <div class="how-step">
+            <div class="how-num">02</div>
+            <div class="how-icon">⚡</div>
+            <h3>L'IA génère ta roadmap</h3>
+            <p>
+              En 3 secondes, tu obtiens des étapes, sous-étapes et ressources
+              personnalisées.
+            </p>
+          </div>
+
+          <div class="how-arrow">→</div>
+
+          <div class="how-step">
+            <div class="how-num">03</div>
+            <div class="how-icon">📈</div>
+            <h3>Progresse étape par étape</h3>
+            <p>
+              Valide chaque sous-étape avec un mini-test et suis ta progression
+              sur la barre.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div
+          class="nav-logo"
+          style="justify-content: center; margin-bottom: 12px"
+        >
+          <span class="logo-mark">A</span>
+          <span class="logo-text">Ascendia</span>
+        </div>
+        <p class="footer-sub">Forge ton chemin vers n'importe quel objectif.</p>
+        <p class="footer-copy">© 2026 Ascendia · Projet universitaire UMMTO</p>
+      </div>
+    </footer>
+  </body>
+</html>
