@@ -10,31 +10,23 @@ function togglemotdepasse() {
     }
 }
 
-function inscrire() {
-    const firstname = document.getElementById("firstname").value;
-    const lastname = document.getElementById("lastname").value;
-    const pays = document.getElementById("pays").value;
+function connecter() {
     const e_mail = document.getElementById("email").value;
     const password = document.getElementById("motdepasse").value;
     const erreur = document.getElementById("erreur");
 
-    if (!firstname || !lastname || !e_mail || !password) {
+    if (!e_mail || !password) {
         alert("Veuillez remplir tous les champs");
         return;
     }
 
-    if (password.length < 8) {
+    const emailSauvegarde = localStorage.getItem("email");
+    const passwordSauvegarde = localStorage.getItem("motdepasse");
+
+    if (e_mail === emailSauvegarde && password === passwordSauvegarde) {
+        erreur.style.display = "none";
+        window.location.href = "accueil.html";
+    } else {
         erreur.style.display = "block";
-        return;
     }
-
-    erreur.style.display = "none";
-
-    localStorage.setItem("firstname", firstname);
-    localStorage.setItem("lastname", lastname);
-    localStorage.setItem("pays", pays);
-    localStorage.setItem("email", e_mail);
-    localStorage.setItem("motdepasse", password);
-
-    window.location.href = "accueil.html";
 }

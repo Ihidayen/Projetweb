@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Ascendia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="PageConnexion.css">
+</head>
+<body class="dark">
+
+    <div class="presentation">
+        <div class="logo">
+            <div class="logo-icon">📈</div>
+            <span>Ascendia</span>
+        </div>
+        <div class="carte">
+            <h1>From goal to<br>mastery.</h1>
+            <p>Turn any ambition into a structured roadmap with clear steps, resources, and real progress tracking.</p>
+            <ul>
+                <li class="item">🗺️ &nbsp;Personalized roadmaps</li>
+                <li class="item">✨ &nbsp;AI-powered guidance</li>
+                <li class="item">✅ &nbsp;Step-by-step execution</li>
+            </ul>
+        </div>
+        <p class="copyright">© 2026 Ascendia</p>
+    </div>
+
+    <div class="inscription">
+        <div class="carte">
+            <form>
+                <h2>Welcome back</h2>
+                <p>Continue your roadmap.</p>
+                <input placeholder="Email address" type="email" id="email" required><br>
+                <div class="password">
+                    <input placeholder="Password" type="password" id="motdepasse" required> <label id="togglepassword" onclick="togglemotdepasse()">👀</label><br>
+                </div>
+                <div class="options">
+                    <label><input type="checkbox" id="remember"> Remember me</label>
+                    <a href="#">Forgot?</a>
+                </div>
+                <button class="button" type="button" onclick="connecter()">Continue</button>
+                <div class="separateur">
+                    <hr><span>or</span><hr>
+                </div>
+                
+                <p id="erreur" style="display: none;">❌ Email ou mot de passe incorrect</p>
+                <p>New here? <a href="PageAuthentification.html">Create account</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="PageConnexion.js"></script>
+</body>
+</html>
