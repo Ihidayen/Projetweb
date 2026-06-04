@@ -46,7 +46,7 @@ window.connecter = function() {
 
     if (e_mail === emailSauvegarde && password === passwordSauvegarde) {
         erreur.style.display = "none";
-        window.location.href = "accueil.html";
+        window.location.href = "index.html";
     } else {
         erreur.style.display = "block";
     }
@@ -64,7 +64,7 @@ window.connecterGoogle = function() {
             localStorage.setItem("lastname", nom);
             localStorage.setItem("email", user.email);
             localStorage.setItem("methode", "google");
-            window.location.href = "accueil.html";
+            window.location.href = "index.html";
         })
         .catch((error) => {
             alert("Erreur Google : " + error.message);
