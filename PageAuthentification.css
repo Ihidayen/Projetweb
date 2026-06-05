@@ -3,28 +3,27 @@ h1, h2 {
     font-family: "Syne", sans-serif;
 }
 p {
-    color: #8888A0;
+    color: #9090aa;
 }
 body {
-    margin: auto 0px;
-    border: solid black 1px;
-    background-color: #0a0a0f;
+    margin: 0;
+    background-color: #0d0d1a;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     height: 100vh;
 }
 body.dark {
-    background-color: #0a0a0f;
+    background-color: #0d0d1a;
 }
 input, select {
-    border: solid black 1px;
+    border: solid #2a2a45 1px;
     height: 6vh;
     width: 85%;
     padding-left: 20px;
     border-radius: 10px;
     margin-bottom: 10px;
-    background-color: #2a2a2f;
+    background-color: #16162a;
     color: #ffffff;
     box-sizing: border-box;
     appearance: none;
@@ -36,12 +35,16 @@ select {
     background-repeat: no-repeat;
     background-position: right 15px center;
 }
+input:focus, select:focus {
+    outline: none;
+    border-color: #7c3aed;
+}
 .button {
     cursor: pointer;
     width: 85%;
     height: 45px;
     background: linear-gradient(to right, #7c3aed, #ec4899);
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 10px;
     margin-top: 15px;
     color: #ffffff;
@@ -49,12 +52,15 @@ select {
     border: none;
     font-size: 15px;
 }
+.button:hover {
+    opacity: 0.9;
+}
 .button-google {
     cursor: pointer;
     width: 85%;
     height: 45px;
     background-color: #ffffff;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 15px;
     color: #000000;
     font-weight: 500;
@@ -74,9 +80,8 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: solid rgba(0, 0, 0, 0) 1px;
     position: relative;
-    background-color: #0a0a0f;
+    background-color: #0d0d1a;
 }
 .inscription {
     height: 100vh;
@@ -85,8 +90,7 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid rgba(0, 0, 0, 0) 1px;
-    background-color: #12151f;
+    background-color: #111120;
 }
 .carte {
     width: 65%;
@@ -94,9 +98,9 @@ select {
 }
 form {
     border-radius: 15px;
-    border: solid #2a2a2f 1px;
+    border: solid #2a2a45 1px;
     text-align: center;
-    background-color: #141418;
+    background-color: #0d0d1a;
     padding: 10px 0;
 }
 h1 {
@@ -129,7 +133,7 @@ ul {
 }
 #togglepassword {
     position: absolute;
-    right: 2vw;
+    right: 3vw;
     top: 1vh;
     cursor: pointer;
 }
@@ -139,16 +143,19 @@ ul {
     width: 85%;
     margin: 0 auto 10px auto;
     gap: 10px;
-    color: #8888A0;
+    color: #9090aa;
     font-size: 13px;
 }
 .separateur hr {
     flex: 1;
     border: none;
-    border-top: 1px solid #2a2a2f;
+    border-top: 1px solid #2a2a45;
 }
 a {
     color: #a78bfa;
+}
+#erreur {
+    color: #e2579c;
 }
  
 @media (max-width: 768px) {
