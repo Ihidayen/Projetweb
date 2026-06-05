@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBDJ0YCGOgDkaXa9IkbVb5Z8CRq5KYN0bk",
@@ -45,14 +45,22 @@ window.inscrire = function() {
 
     erreur.style.display = "none";
 
-    localStorage.setItem("firstname", firstname);
-    localStorage.setItem("lastname", lastname);
-    localStorage.setItem("pays", pays);
-    localStorage.setItem("email", e_mail);
-    localStorage.setItem("motdepasse", password);
-    localStorage.setItem("methode", "manuel");
-
-    window.location.href = "index.html";
+    createUserWithEmailAndPassword(auth, e_mail, password)
+        .then((result) => {
+            localStorage.setItem("firstname", firstname);
+            localStorage.setItem("lastname", lastname);
+            localStorage.setItem("pays", pays);
+            localStorage.setItem("email", result.user.email);
+            localStorage.setItem("methode", "manuel");
+            window.location.href = "accueil.html";
+        })
+        .catch((error) => {
+            if (error.code === "auth/email-already-in-use") {
+                alert("Cet email est déjà utilisé. Connecte-toi.");
+            } else {
+                alert("Erreur : " + error.message);
+            }
+        });
 }
 
 window.inscrireGoogle = function() {
@@ -67,7 +75,7 @@ window.inscrireGoogle = function() {
             localStorage.setItem("lastname", nom);
             localStorage.setItem("email", user.email);
             localStorage.setItem("methode", "google");
-            window.location.href = "index.html";
+            window.location.href = "accueil.html";
         })
         .catch((error) => {
             alert("Erreur Google : " + error.message);
