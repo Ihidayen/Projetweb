@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBDJ0YCGOgDkaXa9IkbVb5Z8CRq5KYN0bk",
@@ -35,21 +35,20 @@ window.connecter = function() {
         return;
     }
 
-    const emailSauvegarde = localStorage.getItem("email");
-    const passwordSauvegarde = localStorage.getItem("motdepasse");
-    const methode = localStorage.getItem("methode");
-
-    if (methode === "google" && e_mail === emailSauvegarde) {
-        alert("Ce compte utilise Google. Clique sur 'Continue with Google'.");
-        return;
-    }
-
-    if (e_mail === emailSauvegarde && password === passwordSauvegarde) {
-        erreur.style.display = "none";
-        window.location.href = "index.html";
-    } else {
-        erreur.style.display = "block";
-    }
+    signInWithEmailAndPassword(auth, e_mail, password)
+        .then((result) => {
+            erreur.style.display = "none";
+            localStorage.setItem("email", result.user.email);
+            localStorage.setItem("methode", "manuel");
+            window.location.href = "accueil.html";
+        })
+        .catch((error) => {
+            if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password" || error.code === "auth/invalid-credential") {
+                erreur.style.display = "block";
+            } else {
+                alert("Erreur : " + error.message);
+            }
+        });
 }
 
 window.connecterGoogle = function() {
@@ -64,7 +63,7 @@ window.connecterGoogle = function() {
             localStorage.setItem("lastname", nom);
             localStorage.setItem("email", user.email);
             localStorage.setItem("methode", "google");
-            window.location.href = "index.html";
+            window.location.href = "accueil.html";
         })
         .catch((error) => {
             alert("Erreur Google : " + error.message);
