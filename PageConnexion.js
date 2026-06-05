@@ -58,8 +58,8 @@ window.connecterGoogle = function() {
             const isNewUser = result._tokenResponse.isNewUser;
 
             if (isNewUser) {
-                alert("Aucun compte trouvé avec ce compte Google. Inscris-toi d'abord.");
                 result.user.delete();
+                alert("Aucun compte trouvé avec ce compte Google. Inscris-toi d'abord.");
                 window.location.href = "PageAuthentification.html";
                 return;
             }
