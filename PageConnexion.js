@@ -40,7 +40,7 @@ window.connecter = function() {
             erreur.style.display = "none";
             localStorage.setItem("email", result.user.email);
             localStorage.setItem("methode", "manuel");
-            window.location.href = "accueil.html";
+            window.location.href = "index.html";
         })
         .catch((error) => {
             if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password" || error.code === "auth/invalid-credential") {
@@ -63,7 +63,7 @@ window.connecterGoogle = function() {
             localStorage.setItem("lastname", nom);
             localStorage.setItem("email", user.email);
             localStorage.setItem("methode", "google");
-            window.location.href = "accueil.html";
+            window.location.href = "index.html";
         })
         .catch((error) => {
             alert("Erreur Google : " + error.message);
