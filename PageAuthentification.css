@@ -1,3 +1,4 @@
+ageauthentification · CSS
 h1, h2 {
     color: #ffffff;
     font-family: "Syne", sans-serif;
@@ -17,9 +18,6 @@ body {
 body.dark {
     background-color: #0a0a0f;
 }
-body.dark .inscription {
-    background-color: rgb(100, 81, 110);
-}
 input, select {
     border: solid black 1px;
     height: 6vh;
@@ -27,7 +25,7 @@ input, select {
     padding-left: 20px;
     border-radius: 10px;
     margin-bottom: 10px;
-    background-color: #5c5c5f;
+    background-color: #2a2a2f;
     color: #ffffff;
     box-sizing: border-box;
     appearance: none;
@@ -75,18 +73,18 @@ select {
     padding-left: 5vw;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     border: solid rgba(0, 0, 0, 0) 1px;
+    position: relative;
 }
 .inscription {
     height: 100vh;
     width: 50vw;
     box-sizing: border-box;
     display: flex;
-    justify-content: right;
-    padding-right: 10vw;
+    justify-content: center;
     align-items: center;
-    background-color: #5a5a94;
     border: solid rgba(0, 0, 0, 0) 1px;
 }
 .carte {
@@ -95,21 +93,35 @@ select {
 }
 form {
     border-radius: 15px;
-    border: solid black 1px;
-    box-shadow: 10px 10px 50px bisque;
+    border: solid #2a2a2f 1px;
     text-align: center;
-    background-color: #04030a;
+    background-color: #141418;
+    padding: 10px 0;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 .item:first-child {
     color: #a78bfa;
     margin-bottom: 2vh;
+    list-style: none;
+    font-size: 15px;
 }
 .item:nth-child(2) {
     color: #e2579c;
     margin-bottom: 2vh;
+    list-style: none;
+    font-size: 15px;
 }
 .item:nth-child(3) {
     color: #9368f7;
+    list-style: none;
+    font-size: 15px;
+}
+ul {
+    padding: 0;
+    margin-top: 2vh;
 }
 .password {
     position: relative;
@@ -134,7 +146,10 @@ form {
     border: none;
     border-top: 1px solid #2a2a2f;
 }
-
+a {
+    color: #a78bfa;
+}
+ 
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -148,7 +163,6 @@ form {
     .inscription {
         width: 100vw;
         height: auto;
-        justify-content: center;
         padding: 5vw;
     }
     .carte {
