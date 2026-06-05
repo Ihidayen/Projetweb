@@ -55,6 +55,15 @@ window.connecterGoogle = function() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
         .then((result) => {
+            const isNewUser = result._tokenResponse.isNewUser;
+
+            if (isNewUser) {
+                result.user.delete();
+                alert("Aucun compte trouvé avec ce compte Google. Inscris-toi d'abord.");
+                window.location.href = "PageAuthentification.html";
+                return;
+            }
+
             const user = result.user;
             const nomComplet = user.displayName || "";
             const prenom = nomComplet.split(" ")[0];
